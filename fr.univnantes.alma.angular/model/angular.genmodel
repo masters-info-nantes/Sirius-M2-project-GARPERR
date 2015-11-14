@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.univnantes.alma.angular/src" modelPluginID="fr.univnantes.alma.angular"
+    modelName="Angular" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>angular.ecore</foreignModel>
+  <genPackages prefix="Angular" disposableProviderFactory="true" ecorePackage="angular.ecore#/">
+    <genClasses ecoreClass="angular.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Project/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="angular.ecore#//Container">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//Container/folders"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Folder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//Folder/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//Folder/pages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Folder/name"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Module/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//Module/moduleElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//Module/imports"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="angular.ecore#//ModuleElement"/>
+    <genClasses ecoreClass="angular.ecore#//ESClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//ESClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//ESClass/fields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//ESClass/functions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//ESClass/extends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//ESClass/abstract"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Field/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Field/type"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//Function/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Function/type"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//NgModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//NgModule/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgModule/ngModuleElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgModule/dependencies"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="angular.ecore#//NgModuleElement"/>
+    <genClasses ecoreClass="angular.ecore#//NgService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//NgService/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgService/esClass"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//NgController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//NgController/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgController/esClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgController/dependencies"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//NgDirective">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//NgDirective/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgDirective/esClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgDirective/controller"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//NgDirective/dependencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference angular.ecore#//NgDirective/template"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//HTML">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//HTML/path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//HTML/controller"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference angular.ecore#//HTML/directives"/>
+    </genClasses>
+    <genClasses ecoreClass="angular.ecore#//Template">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute angular.ecore#//Template/path"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

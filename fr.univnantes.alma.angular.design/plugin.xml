@@ -2,9 +2,9 @@
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
-    <component class="fr.univnantes.alma.angular.design.Activator"
-               id="fr.univnantes.alma.angular.design"
-	       name="angular">
+    <component class="fr.univnantes.alma.angular.designer.Activator"
+               id="fr.univnantes.alma.angular.designer"
+	       name="designer">
     </component>
   </extension>
 </plugin>
