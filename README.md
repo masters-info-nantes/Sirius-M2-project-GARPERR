@@ -4,7 +4,7 @@ Sirius M2 Project
 Generate Angular Model
 ----------------------
 
-Open with eclipse angular.gemmodel on fr.univnantes.angular project and generate Model code, Edit Code and Editor Code
+Open with eclipse angular.gemmodel on fr.univnantes.angular project and generate Model code.
 
 Describe your Angular Project
 ------------------------------

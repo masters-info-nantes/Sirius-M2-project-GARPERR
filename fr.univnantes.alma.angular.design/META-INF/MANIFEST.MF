@@ -10,8 +10,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius,
  org.eclipse.sirius.common.acceleo.aql,
  com.google.guava;bundle-version="15.0.0",
- fr.univnantes.alma.angular;bundle-version="0.1.0",
- fr.univnantes.alma.angular.edit;bundle-version="1.0.0",
- fr.univnantes.alma.angular.editor;bundle-version="1.0.0"
+ fr.univnantes.alma.angular;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
