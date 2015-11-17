@@ -4,7 +4,10 @@
     <modules path="app/user.js">
       <moduleElements xsi:type="angular:ESClass" name="NewUser"/>
       <moduleElements xsi:type="angular:ESClass" name="Users"/>
-      <moduleElements xsi:type="angular:ESClass" name="User"/>
+      <moduleElements xsi:type="angular:ESClass" name="User">
+        <fields name="koin" type="Duck"/>
+        <functions name="getDuck" type="Duck"/>
+      </moduleElements>
       <moduleElements xsi:type="angular:ESClass" name="UpdateUser"/>
     </modules>
     <modules path="app/common.js"/>

@@ -5,6 +5,20 @@
       <metamodel href="../../fr.univnantes.alma.angular/model/angular.ecore#/"/>
       <defaultLayer name="Class diagram">
         <containerMappings name="CD_Class" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Classifier%20Direct%20Edit']" domainClass="angular.ESClass" childrenPresentation="List">
+          <subNodeMappings name="CD_Field" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ClassifierField']" semanticCandidatesExpression="feature:fields" domainClass="angular.Field">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:self.type+'  '+self.name" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="CD_Function" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ClassifierFunction']" semanticCandidatesExpression="feature:functions" domainClass="angular.Function">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:self.type+'  '+self.name+'('+self.parameters+')'" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="5" arcHeight="5" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="15" heightComputationExpression="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -31,12 +45,55 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateNewField" label="New Field" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Field" referenceName="fields">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newField"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="NewFunction" label="New Function" nodeMappings="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="myFunction"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="parameters"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Behavior Tools">
           <ownedTools xsi:type="tool:DirectEditLabel" name="Classifier Direct Edit">
             <mask mask="{0}"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:toCamelCase(arg0)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="ClassifierField">
+            <mask mask="{1} {0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:arg1"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="ClassifierFunction">
+            <mask mask="{1} {0}({2})"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:arg1"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>

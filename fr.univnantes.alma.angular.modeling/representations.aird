@@ -30,6 +30,14 @@
           <children xmi:type="notation:Node" xmi:id="_X0KNQI0IEeWAMe8BDEK6Hg" type="2003" element="_Xz8x4I0IEeWAMe8BDEK6Hg">
             <children xmi:type="notation:Node" xmi:id="_X0K0UI0IEeWAMe8BDEK6Hg" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_X0K0UY0IEeWAMe8BDEK6Hg" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_BkOYo40OEeWnybFZpgCdgQ" type="3010" element="_Bjpw4I0OEeWnybFZpgCdgQ">
+                <styles xmi:type="notation:FontStyle" xmi:id="_BkOYpI0OEeWnybFZpgCdgQ" fontName="Cantarell" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BkOYpY0OEeWnybFZpgCdgQ"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3IjjoI0QEeWnybFZpgCdgQ" type="3010" element="_3IU6II0QEeWnybFZpgCdgQ">
+                <styles xmi:type="notation:FontStyle" xmi:id="_3IjjoY0QEeWnybFZpgCdgQ" fontName="Cantarell" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_3Ijjoo0QEeWnybFZpgCdgQ"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_X0K0Uo0IEeWAMe8BDEK6Hg"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_X0K0U40IEeWAMe8BDEK6Hg"/>
             </children>
@@ -80,6 +88,22 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Bjpw4I0OEeWnybFZpgCdgQ" name="Duck  koin">
+          <target xmi:type="angular:Field" href="angular.xmi#//@folders.0/@modules.0/@moduleElements.2/@fields.0"/>
+          <semanticElements xmi:type="angular:Field" href="angular.xmi#//@folders.0/@modules.0/@moduleElements.2/@fields.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_BjuCUI0OEeWnybFZpgCdgQ" labelPosition="node" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Field']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_3IU6II0QEeWnybFZpgCdgQ" name="Duck  getDuck()">
+          <target xmi:type="angular:Function" href="angular.xmi#//@folders.0/@modules.0/@moduleElements.2/@functions.0"/>
+          <semanticElements xmi:type="angular:Function" href="angular.xmi#//@folders.0/@modules.0/@moduleElements.2/@functions.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_3IWIQI0QEeWnybFZpgCdgQ" labelPosition="node" color="209,209,209">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.univnantes.alma.angular.design/description/angular.odesign#//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']/@subNodeMappings[name='CD_Function']"/>
+        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Z6YS4I0IEeWAMe8BDEK6Hg" name="UpdateUser" width="15" height="12">
         <target xmi:type="angular:ESClass" href="angular.xmi#//@folders.0/@modules.0/@moduleElements.3"/>
