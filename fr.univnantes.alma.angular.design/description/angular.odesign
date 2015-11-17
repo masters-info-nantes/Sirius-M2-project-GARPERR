@@ -13,7 +13,7 @@
             </style>
           </subNodeMappings>
           <subNodeMappings name="CD_Function" labelDirectEdit="//@ownedViewpoints[name='Architecture']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='ClassifierFunction']" semanticCandidatesExpression="feature:functions" domainClass="angular.Function">
-            <style xsi:type="style:SquareDescription" labelExpression="aql:self.type+'  '+self.name+'('+self.parameters+')'" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:self.type+'  '+self.name+'('+self.parameters->collect(p | p.type+' '+p.name)->sep(', ')+')'" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
@@ -65,7 +65,6 @@
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="angular.Function" referenceName="functions">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="myFunction"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="String"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="parameters"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
