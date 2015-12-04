@@ -3,6 +3,8 @@
   <folders name="app">
     <modules path="modulePlein">
       <moduleElements xsi:type="angular:ESClass" name="David"/>
+      <moduleElements xsi:type="angular:NgService" name="Service"/>
+      <moduleElements xsi:type="angular:NgController" name="Controller" dependencies="//@folders.0/@modules.0/@moduleElements.1"/>
     </modules>
     <modules path="moduleVide"/>
   </folders>
